@@ -4,13 +4,13 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json
-COPY package.json /usr/src/app/
+COPY package.json .
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application
-COPY . /usr/src/app
+COPY . .
 
 # Expose the app's port
 EXPOSE 3000
