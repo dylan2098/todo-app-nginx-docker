@@ -11,7 +11,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - MONGO_URI=mongodb://mongo:27017/todos
+      - MONGO_URI=mongodb+srv://triminhnguyen2098:KVmmcAkiww4U7NDv@todo-app.rleya.mongodb.net/?retryWrites=true&w=majority&appName=todo-app
     depends_on:
       - mongo
 
