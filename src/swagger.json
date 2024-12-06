@@ -1,0 +1,47 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Todo API",
+      "description": "API for managing todos"
+    },
+    "host": "localhost:8080",
+    "basePath": "/api",
+    "schemes": ["http"],
+    "paths": {
+      "/todos": {
+        "get": {
+          "summary": "Get all todos",
+          "responses": {
+            "200": { "description": "Success" }
+          }
+        },
+        "post": {
+          "summary": "Create a new todo",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Todo"
+              }
+            }
+          ],
+          "responses": {
+            "201": { "description": "Created" }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Todo": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "completed": { "type": "boolean" }
+        }
+      }
+    }
+  }
+  
