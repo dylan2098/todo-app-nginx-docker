@@ -1,6 +1,6 @@
-FROM node:18.17.0
+FROM node:20
 
-RUN mkdir -p /usr/src/app
+# RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json
