@@ -2,7 +2,7 @@ FROM node:20
 
 RUN  npm install -g npm@10.9.2
 
-# RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json
