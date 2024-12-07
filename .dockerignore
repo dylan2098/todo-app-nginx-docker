@@ -1,9 +1,3 @@
 node_modules
-npm-debug.log
-.DS_Store
-src
-.env
-tsconfig.json
-server.ts
 .vscode
 README.md

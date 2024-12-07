@@ -1,17 +1,16 @@
 FROM node:20
 
-RUN  npm install -g npm@10.9.2
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-# RUN mkdir -p .
-WORKDIR /app
 # Copy package.json and package-lock.json
-COPY package.json /app
+COPY package.json /usr/src/app
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application
-COPY . /app
+COPY . /usr/src/app
 
 # Expose the app's port
 EXPOSE 3000

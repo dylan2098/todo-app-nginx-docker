@@ -4,6 +4,9 @@ services:
   app:
     build:
       context: .
+    volumes:
+    - ./:/usr/src/app
+    - /usr/src/app/node_modules
     container_name: todo-api
     ports:
       - "3000:3000"
