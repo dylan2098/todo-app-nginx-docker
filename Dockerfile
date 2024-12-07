@@ -1,7 +1,6 @@
 FROM node:20.5
 
 RUN rm -rf node_modules
-RUN rm package-lock.json
 
 RUN npm cache clean --force
 
