@@ -9,6 +9,9 @@ COPY package.json /usr/src/app
 # Install dependencies
 RUN npm install
 
+#Upgrade npm to version 10.9.2
+RUN npm install -g npm@10.9.2
+
 # Copy the rest of the application
 COPY . /usr/src/app
 
