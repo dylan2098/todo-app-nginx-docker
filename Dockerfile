@@ -1,10 +1,4 @@
-FROM node:20.5
-
-RUN rm -rf node_modules
-
-RUN npm cache clean --force
-
-RUN npm install -g npm@10.9.2
+FROM node:18.17.0
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
