@@ -4,11 +4,15 @@ services:
   app:
     build:
       context: .
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
     container_name: todo-api
     ports:
       - "3000:3000"
     environment:
-      - MONGO_URI=mongodb+srv://triminhnguyen2098:KVmmcAkiww4U7NDv@todo-app.rleya.mongodb.net/?retryWrites=true&w=majority&appName=todo-app
+      # - MONGO_URI=mongodb+srv://triminhnguyen2098:KVmmcAkiww4U7NDv@todo-app.rleya.mongodb.net/?retryWrites=true&w=majority&appName=todo-app
+      - MONGO_URI=mongodb://mongo:27017/todos
     depends_on:
       - mongo
 
